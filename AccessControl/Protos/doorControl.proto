@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "DoorManipulation";
+
+package doorControl;
+
+service DoorControl {
+  rpc OpenDoor (DoorRequest) returns (DoorResponse);
+  rpc CloseDoor (DoorRequest) returns (DoorResponse);
+}
+
+message DoorRequest {
+  string number = 1;
+  string card = 2;
+}
+
+message DoorResponse {
+  string number = 1;
+  string status = 2;
+  string battery = 3;
+  bool success = 4;
+}

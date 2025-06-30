@@ -4,11 +4,11 @@ namespace AccessControl
 {
     public class DBContext : DbContext
     {
-        public DbSet<Door> Doors;
+	    public DbSet<Door> Doors;
 
-        public DbSet<Card> Cards;
+	    public DbSet<Card> Cards;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseInMemoryDatabase("accessControl");
         }

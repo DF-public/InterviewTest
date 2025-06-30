@@ -14,6 +14,7 @@ namespace AccessControl.Controllers
         }
 
         [HttpPost]
+        [Route("create123")]
         public string Create([FromQuery] int cardNumber, [FromQuery] string firstName, [FromQuery] string lastName)
         {
             return _cardsService.AddCard(cardNumber, firstName, lastName);
